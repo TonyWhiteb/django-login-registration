@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django Login</title>
+  </head>
+  <body>
+    {% block content %}
+    <h2>Login</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p}}
+      <button type="submit" name="button">Login</button>
+    </form>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <link rel="stylesheet" type="text/css" href=" {% static 'css/base.css' %}">
+  Halo {{ user.username }}
+  <p>
+    <a href="{% url 'logout' %}">Logout</a>
+  </p>
+{% else %}
+  <p>You Are Not Logged In</p>
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
+{% endblock %}
