@@ -10,6 +10,11 @@ A simple and robust django login registration, this app contain how to configure
 6. And then login with that superuser in `http://127.0.0.1:8000/`
 7. If you want to login with new user, register your new accounts first `http://127.0.0.1:8000/accounts/signup/`
 8. Go back to `http://127.0.0.1:8000/` and try with your new accounts.
+9. To check forget your password try `http://127.0.0.1:8000/accounts/password_reset/`
+10. To check reset your password try `http://127.0.0.1:8000/password_reset/done/`
+11. To setting up a new password try `http://127.0.0.1:8000/accounts/reset/Mg/set-password/`
+12. To check password reset is done try `http://127.0.0.1:8000/accounts/reset/done/`
 
 # Note
-If error occurs, go to django settings in `project/settings.py` and change `accounts` in installed applications with `accounts.apps.AccountsConfig`
+1. If error occurs, go to django settings in `project/settings.py` and change `accounts` in installed applications with `accounts.apps.AccountsConfig`
+2. If you want to try reset password, go check in your directory there's a new folder such as `sent_email` and then click the links that already provided.
